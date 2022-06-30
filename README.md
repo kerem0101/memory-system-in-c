@@ -3,7 +3,7 @@
 ![alt text](https://github.com/kerem0101/memory-system-in-c/blob/main/memory-layout-in-c.png)
 
 ### 1. Text Segment:
-This segment contains the binary code of the compiled system. Unchangeable, read-only. It is located under the Heap and Stack regions. Functions and strings are in this region.
+This segment contains the binary code of the compiled system. Unchangeable, read-only. It is located under the Heap and Stack regions.
 ### 2. Initialized Data Segment:
 The initial value is the assigned data section. Initialized data including global and static variables are stored in this part of memory.
 ```c
@@ -37,11 +37,16 @@ The stack section contains the local address of the function, the parameters ent
 ```c
 #include <stdio.h>
 
-int g_init; //global variable stored in Uninitialized Data Segment
+void fun(){
+	
+	int var; //local variable stored in Stack when function is called
+}
 
 int main() {
    
-	static int l_init; //static variable stored in Uninitialized Data Segment
+	int l_var; //local variable stored in Stack
+	
+	fun();
 	
 	return 0;
 }
