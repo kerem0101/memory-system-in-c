@@ -1,4 +1,7 @@
 ## memory-system-in-c
+
+![alt text](https://github.com/kerem0101/memory-system-in-c/blob/main/memory-layout-in-c.png)
+
 ### 1. Text Segment:
 This segment contains the binary code of the compiled system. Unchangeable, read-only. It is located under the Heap and Stack regions. Functions and strings are in this region.
 ### 2. Initialized Data Segment:
